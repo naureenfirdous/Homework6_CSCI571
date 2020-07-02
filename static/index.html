@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework 6</title>
+        <script language="JavaScript" src="forms.js"></script>
+        <script language="JavaScript" src="card_switch.js"></script>
+        <script language="JavaScript" src="request.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+            <div>
+                <div class="upper">
+                    <div class="header">
+                        <div class="logo"><a href="https://www.ebay.com"><img src="https://www.csci571.com/hw/hw6/images/eBayLogo.png" height="80px" /></a></div>
+                        <div class="top-left">Shopping</div>
+                    </div>
+                </div>
+                <div class = "searchform">
+                    <form onsubmit="return submitform();" autocomplete="on">
+                      <table style="border: 2px solid black;">
+                          <tr>
+                              <td>
+                                <label class="bold_label" for="keywords">Key Words<span class="required">*</span>:</label>
+                                <input size="30px" type="text" id="keywords" name="keywords" required autofocus>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <label class="bold_label">Price Range: </label>
+                                <label for="from">From </label><input size="7px" type="number" id="from" name="from" style="width:50px;">
+                                <label for="to">to </label><input size="7px" type="number" id="to" name="to" style="width:50px;"></tr>
+                              </td>
+                          <tr>
+                              <td>
+                                <label class="bold_label">Condition:</label>
+                                <input type="checkbox" id="condition1" name="condition1" value="New">
+                                <label for="condition1">New</label>
+                                <input type="checkbox" id="condition2" name="condition2" value="Used">
+                                <label for="condition2">Used</label>
+                                <input type="checkbox" id="condition3" name="condition3" value="VeryGood">
+                                <label for="condition3">Very Good</label>
+                                <input type="checkbox" id="condition4" name="condition4" value="Good">
+                                <label for="condition4">Good</label>
+                                <input type="checkbox" id="condition5" name="condition5" value="Acceptable">
+                                <label for="condition5">Acceptable</label>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <label class="bold_label">Seller:</label>
+                                <input type="checkbox" id="seller" name="seller" value="seller">
+                                <label for="condition1">Return Accepted</label>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <label class="bold_label">Shipping:</label>
+                                <input type="checkbox" id="free" name="free" value="free">
+                                <label for="condition1">Free</label>
+                                <input type="checkbox" id="expedited" name="expedited" value="expedited">
+                                <label for="condition1">Expedited</label>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <label for="Sortby" class="bold_label">Sort by: </label>
+                                <select name="Sortby" id="Sortby">
+                                    <option value="bestmatch" selected>Best Match</option>
+                                    <option value="p_high">Price: highest first</option>
+                                    <option value="ps_high">Price + Shipping: highest first</option>
+                                    <option value="ps_low">Price + Shipping: lowest first</option>
+                                </select>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <button type="button" value="Clear" onclick="clearform();">Clear</button>
+                                <button type="submit" value="Search" style="width:70px;">Search</button>
+                              </td>
+                          </tr>
+                      </table>  
+                    </form>
+                </div>
+                <center>
+                <div id="cardscontainer1"></div>
+                <button id="morebutton" onclick="showmore()">Show More</button>
+                <div id="cardscontainer2"></div>
+                <button id="lessbutton" onclick="showless()">Show Less</button>
+                </center>
+            </div>
+    </body>
+</html>

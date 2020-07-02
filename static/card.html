@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card</title>
+	<meta content="utf-8" http-equiv="encoding">
+<script src="card_switch.js"></script>
+<style>
+html, body {
+  height: 100%; /* required to make body occupy the full viewport by default */
+}
+
+.cardscontainer
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.centerimage {
+	display : flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.itemscard {
+ 	display: flex;
+ 	margin: 5px;
+  	padding: 20px;
+  	border : 1px solid gray;
+  	transition: 0.3s;
+  	width: 700px;
+  	border-radius: 5px;
+  	background-color: #F0F0F0; 
+}
+
+.itemscard:hover {
+  box-shadow: 0px 16px 20px 0 rgba(0,0,0,0.4);
+}
+
+img {
+	width: 15px;
+	height: 15px;
+	object-fit: cover;
+}
+
+p
+{
+	margin:0px;
+}
+
+h4
+{
+	margin: 0 0 5px 0;
+}
+
+.cross
+{
+	position: relative;
+	top: -10px;
+	right: -10px;
+	color:red; 
+	font-size: 25px;
+}
+
+.ebay {
+    height: 120px;
+	width: 180px;
+}
+
+.itemscontainer {
+  	margin-left: 20px;
+  	height:100%;
+  	width: 460px;
+}
+
+.truncate-with-css-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+</style>
+
+</head>
+<body>
+<div>
+	<form>
+		<label for="Sortby" class="bold_label">Sort by: </label>
+                                <select name="Sortby" id="Sortby">
+                                    <option value="bestmatch" selected>Best Match</option>
+                                    <option value="p_high">Price: highest first</option>
+                                    <option value="ps_high">Price + Shipping: highest first</option>
+                                    <option value="ps_low">Price + Shipping: lowest first</option>
+                                </select>
+	</form>
+</div>
+<div class="cardscontainer">
+    <div class="itemscard">
+        <img class="ebay" src="https://www.csci571.com/hw/hw6/images/ebay_default.jpg" alt="default">
+        <div class="itemscontainer">
+            <h4>Iphone 11 Pro Max</h4> 
+            <p><b>Category: </b><a href="https://www.ebay.com/itm/iPhone-11-Pro-Max-64GB-Unlocked/114237092641?epid=8034218247&_trkparms=ispr%3D1&hash=item1a990fb321:m:mGixoURHS5vXbSgDEhw_dZQ:sc:USPSPriority!98104!US!-1&enc=AQAEAAACcIQvEcHUrT7nmUC3yY5qbPyaBN1nJEDYW8MyypsJPgXK4bURMq2bKi1lXHfouGa7iVVcDN2%2Bq3g9kWKk25W1vWuIyNEsbeLRtEUhs26sKh4YcxMdceS5NkqDumgDEmdWPDhtJr940f4Ml11C1Wres%2BN0xqJrU6tbs%2BdSXN7rkUKwVrET6H%2Bdw%2FQmt8HO1vacsvKXXzLvbXL9lc6NM3aRm7RGiVmM%2BRW0tYkiAqLuS1B5HgD2nVy%2Bledp1s3veoc9sJwscrXcc6eq%2BFxPqMKFA53SKlxY6Y4KL%2F5x%2B%2BnQjwAIoPI3hZ2ADHanhZ31iCx%2FR%2B0NLrjufsEP9%2F1iOZlbxRLk0c7BR54HOCVhoQ74tcKqQ2GjPD3huM9bE3yeogJoIlmGsa%2FU%2FMBfrS3uOOCwHfClx7UGRggPTgxlfCrFhXXuAuaDRLrHlptYdZZkxP5EZREqNY3Af38fF5fkVYUVLJolkVlzzNcYYHQW8gKVmMzdVlLOHywy%2F8q6fZKKd7iueokjHR%2FJsYvGo3n8kAD2%2F00yCxVhQj6KhA%2Bivn%2BXFU9Idd3Q%2Fd%2BSp0BPeGTwSfzVRb7V%2FwE%2B8nYgDK7N3mnmvCn2kkc3wx35AZzrk8O3EeDaGanF1udJIDrP208xaJEcwxeCw3mWzAhQkcOwX2dczkhDpQXyOJCnPoCnIjizWbNKmpIg4ToeHPP9PB%2FaXjAHp56dXehLCrwZCkZPNHDJ1GnLAWpklgr%2FIZNgeduwnlUbQVEdIqE4DdQ9GpvFan%2Fe12k%2BcfVR8t1%2B2Y9XErKeVZbMAracvKcvy4UFehrpD3J8SviPBSk7cUiMhi4Aqzy71g%3D%3D&checksum=11423709264141a01ecc223649d68758875068b090f2"><img src="https://www.csci571.com/hw/hw6/images/redirect.png"></a></p>
+            <p><b>Condition: </b><img src="https://www.csci571.com/hw/hw6/images/topRatedImage.png"></p>
+            <p><b>Price: </b></p>
+        </div>
+    </div>
+	<div class="itemscard" onclick="opentab(this)">'
+		<div class="centerimage"><img class="ebay" src="https://www.csci571.com/hw/hw6/images/ebay_default.jpg" alt="default"></div> 
+        <div class="itemscontainer">
+            <h4 class="itemtitle truncate-with-css-ellipsis">The CSS implementations are great and I'd encourage their use for 90% of cases, but there are times where you may need to do this via JavaScript. Maybe you don't want that content available for screenreaders? Who knows, I'm not judging (at least in this post), but here's how you can apply the same ellipsis truncation via JavaScript.</h4> 
+            <p><b>Category: </b><a href="https://www.ebay.com/itm/iPhone-11-Pro-Max-64GB-Unlocked/114237092641?epid=8034218247&_trkparms=ispr%3D1&hash=item1a990fb321:m:mGixoURHS5vXbSgDEhw_dZQ:sc:USPSPriority!98104!US!-1&enc=AQAEAAACcIQvEcHUrT7nmUC3yY5qbPyaBN1nJEDYW8MyypsJPgXK4bURMq2bKi1lXHfouGa7iVVcDN2%2Bq3g9kWKk25W1vWuIyNEsbeLRtEUhs26sKh4YcxMdceS5NkqDumgDEmdWPDhtJr940f4Ml11C1Wres%2BN0xqJrU6tbs%2BdSXN7rkUKwVrET6H%2Bdw%2FQmt8HO1vacsvKXXzLvbXL9lc6NM3aRm7RGiVmM%2BRW0tYkiAqLuS1B5HgD2nVy%2Bledp1s3veoc9sJwscrXcc6eq%2BFxPqMKFA53SKlxY6Y4KL%2F5x%2B%2BnQjwAIoPI3hZ2ADHanhZ31iCx%2FR%2B0NLrjufsEP9%2F1iOZlbxRLk0c7BR54HOCVhoQ74tcKqQ2GjPD3huM9bE3yeogJoIlmGsa%2FU%2FMBfrS3uOOCwHfClx7UGRggPTgxlfCrFhXXuAuaDRLrHlptYdZZkxP5EZREqNY3Af38fF5fkVYUVLJolkVlzzNcYYHQW8gKVmMzdVlLOHywy%2F8q6fZKKd7iueokjHR%2FJsYvGo3n8kAD2%2F00yCxVhQj6KhA%2Bivn%2BXFU9Idd3Q%2Fd%2BSp0BPeGTwSfzVRb7V%2FwE%2B8nYgDK7N3mnmvCn2kkc3wx35AZzrk8O3EeDaGanF1udJIDrP208xaJEcwxeCw3mWzAhQkcOwX2dczkhDpQXyOJCnPoCnIjizWbNKmpIg4ToeHPP9PB%2FaXjAHp56dXehLCrwZCkZPNHDJ1GnLAWpklgr%2FIZNgeduwnlUbQVEdIqE4DdQ9GpvFan%2Fe12k%2BcfVR8t1%2B2Y9XErKeVZbMAracvKcvy4UFehrpD3J8SviPBSk7cUiMhi4Aqzy71g%3D%3D&checksum=11423709264141a01ecc223649d68758875068b090f2"><img src="https://www.csci571.com/hw/hw6/images/redirect.png"></a></p>
+            <p><b>Condition: </b><img src="https://www.csci571.com/hw/hw6/images/topRatedImage.png"></p>
+            <p><b>Price: </b></p>
+            <p style="display:none" id="seller">Seller <b>accepts</b> returns</p>
+            <p style="display:none" id="freeshipping">Free Shipping -- Expedited Shipping Available</p>
+            <p style="display:none" id=><b>Price: ( + for shipping ) </b><span style="font-style:italics">Los Angeles, CA</span></p>
+        </div>
+        <div style="display:none" class="cross" id="cross" onclick="closetab(this, event)">&times;</div> 
+    </div>
+</div>
+</body>
+</html>

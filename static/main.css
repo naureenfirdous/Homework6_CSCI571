@@ -1,0 +1,457 @@
+html {
+  scroll-behavior: smooth;
+}
+
+table {
+  width : 550px;
+}
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+
+}
+
+th, td {
+  padding: 12px;
+}
+
+td {
+  border-bottom : 2px solid gray;
+}
+.header {
+  align-self: left;
+  font-size: 35px;
+  font-family: Times;
+  font-weight: bold;
+  color : #272F33;
+  width : 550px;
+  position: relative;
+  display: inline-block;
+}
+
+.logo img {
+    float: left;
+    padding-top : 0px;
+    padding-left : 115px;
+}
+
+.zoom {
+  display : flex;
+	align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.zoom img {
+  transition: transform 1s;
+  border : 2px solid grey;
+  object-fit: cover;
+  max-width: 160px;
+  max-height : 200px;
+}
+
+.zoom img:hover {
+    transform : scale(2);
+    -webkit-transform: scale(2);
+}
+
+.totalEntries {
+  width :750px;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top : 10px;
+}
+
+.upper {
+    text-align: center;
+}
+  
+.top-left {
+  position: absolute;
+  top: 25px;
+  left: 300px;
+}
+
+.searchform {
+    text-align: center;
+
+}
+
+form {
+    display : inline-block;
+}
+
+.bold_label {
+  font-weight : bold;
+}
+
+.required {
+  color: red;
+}
+
+select {
+  font-size : 15px;
+  text-align: center;
+  text-align-last: center;
+  -moz-text-align-last: center;
+}
+
+option {
+  text-align: left;
+}
+
+.hidden {
+  display:none;
+}
+
+#morebutton, #lessbutton {
+  width: 100px;
+  height: 38px;
+  font-size: 15px;
+  border: 1px solid white;
+  display: none;
+  text-decoration: none;
+  text-align: center;
+  border-radius:4px;
+  padding : 10px;
+}
+
+button {
+  height: 28px; 
+  background-color:lightgray; 
+  border-radius: 4px;
+  transition: 0.3s;
+  border: 1px solid white;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+button:hover {
+  background-color: green; /* Green */
+  color : white;
+}
+
+.cardscontainer {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-left:20px;
+  align-items:center;
+}
+
+.itemscard {
+ 	display: flex;
+ 	margin: 2px;
+  padding: 20px;
+  border : 1px solid black;
+  transition: 0.3s;
+  width: 730px;
+  border-radius: 5px;
+  background-color: #F0F0F0; 
+  text-align: left;
+  border-width: 1.5px;
+  font-size : 17px;
+}
+
+.itemscard:hover {
+  box-shadow: 0px 16px 20px 0 rgba(0,0,0,0.4);
+}
+
+p {
+  margin-left: 25px;
+  margin-top : 15px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  margin-left: 25px;
+  margin-top : 5px;
+  margin-bottom: 15px;
+}
+
+.cross {
+  position: relative;
+	top: -20px;
+  right: 0px;
+ 	color:red;
+ 	font-size: 38px;
+  font-weight : bold;
+  -webkit-text-stroke-width: 2px; 
+  -webkit-text-stroke-color: black; 
+	text-shadow: -1px  black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.ebay {
+  height: 120px;
+	width: 180px;
+}
+
+.itemscontainer {
+  margin-left: 20px;
+  height:100%;
+  width: 490px;
+}
+
+.noresults {
+  margin : 100px;
+  font-size : 35px;
+  font-weight: bold;
+}
+
+.truncate-with-css-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemtitle {
+  color :  #0000EE ;
+  text-decoration : underline;
+  margin-left: 25px;
+  margin-top : 5px;
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+
+a:visited {
+  color: #551A8B;;
+}
+
+img.c {
+  vertical-align: middle;
+}
+
+/* .main-form {
+    width: auto;
+    margin: auto;
+    font-size: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+.form-check-label {
+    margin-right : 5px;
+}
+
+.buttons {
+    align-items: right;
+}
+
+.btn {
+    margin : 5px;
+}
+
+.icons {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+ 
+/*@media (max-width: 576px) { 
+    .keyword { 
+        width : 430px;
+    }
+    .price {
+        width: 215px;
+    }
+    .main-form {
+        width: 576px;
+        margin: auto;
+        font-size: 15px;
+    }
+    .card {
+        width : 495px;
+    }
+
+
+  }
+
+  @media (max-width: 420px) { 
+    .keyword { 
+        width : 350px;
+    }
+    .price {
+        width: 175px;
+    }
+    .main-form {
+        width : 420px;
+        margin: auto;
+        font-size: 13px;
+    }
+    .card {
+        width : 375px;
+    }
+    .keyword { 
+        width : 600px;
+    }
+    .price {
+        width: 300px;
+    }
+    .main-form {
+        width: 700px;
+        margin: auto;
+        font-size: 15px;
+    }
+  }
+  @media (max-width: 500px) { 
+    .main-form {
+        width: auto;
+        margin: auto;
+        font-size: 13px;
+    }
+    img {
+        padding-top : 10px;
+        width : 350px;
+        height : 140px;
+    }
+  }
+
+  @media (min-width: 500px) { 
+    .container {
+        padding : 10px;
+
+    }
+    img {
+        padding-top : 10px;
+        width : 225px;
+        height : 90px;
+    }
+  }
+  @media (min-width: 990px) { 
+    .container {
+        padding-left : 200px;
+        padding-right : 200px;
+
+    } 
+    img {
+        padding-top : 10px;
+        width : 225px;
+        height : 90px;
+    }
+  }
+
+  .alert {
+      align-content: center;
+      align-self: center;
+      align-items: center;
+  }
+
+  .results { 
+    width  : auto;
+    margin : auto;
+    font-size: 15px;
+  }
+
+  .itemtitle {
+      color : #2a6aa8;
+      font-size : 17px;
+  }
+
+  .card {
+      display : flex;
+      background-color: lightgrey;
+      margin : 5px;
+      border-radius: 0px;
+      border : none;
+      flex-direction: row;
+      
+  }
+
+  p {
+     font-size : 14px; 
+     margin: 0px;
+     padding : 5px;
+  }
+  
+  .images {
+      width : 150px;
+      height : 150px;
+      display: block;
+      margin-top : 5px;
+      margin-bottom : 5px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .zoom {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+  }
+
+  .hidden {
+    display:none;
+  }
+
+  .pagination_box {
+      display : flex;
+  } */
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; 
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}  
+
+/* from homework 6     <div class="row form-group">
+              <div class="col-lg-2 col-sm-12 col-12">
+                <label>Conditions</label>
+              </div>
+              <div class="col-lg-10 col-sm-12 col-12">
+              <div class="row" style="margin-left:0px;">
+                  <div class="form-check-inline col-2 col-lg-1 padding-0">
+                      <input type="checkbox" class="form-check-input" id="check1" name="vehicle1" value="something">
+                      <label class="form-check-label" for="check1">New</label>
+                  </div>
+                  <div class="form-check-inline col-2 col-lg-1 padding-0">
+                      <input type="checkbox" class="form-check-input" id="check2" name="vehicle2" value="something">
+                      <label class="form-check-label" for="check2">Used</label>
+                  </div>
+                  <div class="form-check-inline col-3 col-lg-2 padding-0" style="padding: 0px; margin: 0px;">
+                      <input type="checkbox" class="form-check-input" >
+                      <label class="form-check-label">Very Good</label>
+                  </div>
+                   <div class="form-check-inline col-2 col-lg-1 padding-0">
+                      <input type="checkbox" class="form-check-input" >
+                      <label class="form-check-label">Good</label>
+                  </div>
+                   <div class="form-check-inline col-3 col-lg-2 padding-0">
+                      <input type="checkbox" class="form-check-input" >
+                      <label class="form-check-label">Acceptable</label>
+                  </div>
+              </div>
+              </div>
+            </div>
+*/
